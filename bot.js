@@ -8,6 +8,8 @@ const app = express();
 
 dotenv.config()
 
+const TELEGRAM_API='5349249276:AAG84e6Xv0tLhmRzmNvja1D01IwyCKLW2RI'
+
 setInterval(async () => {
     try {
         console.log('setInterval para que no se duerma el servidor en render');
@@ -17,7 +19,7 @@ setInterval(async () => {
     }
 }, 60000); // 10 minutes
 
-const telegramBot = new TelegramBot(process.env.TELEGRAM_API, {polling: true});
+const telegramBot = new TelegramBot(TELEGRAM_API, {polling: true});
 
 const PORT = process.env.PORT || 3001;
 
