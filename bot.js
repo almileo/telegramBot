@@ -8,14 +8,14 @@ const TelegramBot = require('node-telegram-bot-api');
 
 dotenv.config()
 
-setInterval(async () => {
-    try {
-        console.log('setInterval para que no se duerma el servidor en render');
-        await axios.get(`https://telegram-arbitraje.onrender.com/`);
-    } catch (error) {
-        console.log('Error: ', error)   
-    }
-}, 60000); // 10 minutes
+// setInterval(async () => {
+//     try {
+//         console.log('setInterval para que no se duerma el servidor en render');
+//         await axios.get(`https://telegram-arbitraje.onrender.com/`);
+//     } catch (error) {
+//         console.log('Error: ', error)   
+//     }
+// }, 60000); // 10 minutes
 
 const telegramBot = new TelegramBot(process.env.TELEGRAM_API);
 
