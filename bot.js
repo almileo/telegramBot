@@ -19,7 +19,7 @@ setInterval(async () => {
     }
 }, 60000); // 10 minutes
 
-const telegramBot = new TelegramBot(TELEGRAM_API, {polling: true});
+const telegramBot = new TelegramBot(TELEGRAM_API);
 
 const PORT = process.env.PORT || 3001;
 
